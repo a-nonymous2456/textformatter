@@ -1,0 +1,82 @@
+body{
+    background: gray;
+    padding: 0;
+    margin: 0;
+}
+
+#nav{
+    background-color: red;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 340px;
+}
+
+#rightside{
+    color: azure;
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    padding-top: 23px;
+}
+
+#logo{
+    color: azure;
+    font-size: 70px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+#mainhead{
+    font-size: 45px;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+#secondhead{
+    font-size: 35px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+#inputbox1, #inputbox2{
+    width: 1100px;
+    height: 400px;
+    margin-top: 40px;
+    margin-left: 115px;
+    text-align: start;
+    padding-top: 15px;
+    padding-left: 15px;
+    line-height: normal;
+    position: relative;
+    outline: none;
+}
+
+#inputbox1::placeholder, #inputbox2::placeholder {
+    position: absolute;
+    top: 15px; /* Adjust this value as needed */
+    left: 15px;
+}
+
+#formatsection{
+    display: flex;
+    flex-direction: column;
+}
+
+#format{
+    background-color: red;
+    width: 150px;
+    height: 50px;
+    color: azure;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 1083px;
+    margin-top: 40px;
+    border: none;
+    cursor: pointer;
+}

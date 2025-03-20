@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Formatter</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script>
+        async function formatText() {
+            let inputtext = document.getElementById("inputbox1").value
+
+            let response = await fetch("/format", {
+                method: "POST",
+                headers: {
+                    "CONTENT-TYPE": "application/json"
+                },
+                body: JSON.stringify({text:inputtext})
+            })
+
+            let data = await response.json()
+
+            document.getElementById("inputbox2").value = data.formatted_text
+        }
+    </script>
+</head>
+<body>
+    <div id="nav">
+        <div id="logo">TF</div>
+        <div id="rightside">
+            <div id="home">Home</div>
+            <div id="about">About</div>
+            <div id="plans">Plans</div>
+        </div>
+    </div>  
+    <div>
+        <div id="mainhead">Text Formatter</div>
+        <div id="secondhead">Format Your Text With Just One Click</div>
+        <div id="formatsection"> 
+            <textarea placeholder="Enter your text here" id="inputbox1"></textarea>
+            <button id="format" onclick="formatText()">Format</button>
+            <textarea placeholder="Formatted text will be displayed here" id="inputbox2" readonly="true"></textarea>
+        </div>
+    </div> 
+</body>
+</html>
